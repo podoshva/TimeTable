@@ -1,0 +1,14 @@
+body {
+  font-family: 'Open Sans', Arial;
+  font-size: 40px;
+}
+
+.timetable {
+
+  display: grid;
+  border-radius: 5px;
+}
+
+div {
+  border: solid 1px rgb(104, 104, 104);
+}
