@@ -1,14 +1,41 @@
 body {
-  font-family: 'Open Sans', Arial;
+  font-family: Arial;
   font-size: 40px;
 }
 
-.timetable {
-
-  display: grid;
-  border-radius: 5px;
+.card {
+  border-radius: 30px;
+  border: solid 3px;
+  background-color: rgb(238, 238, 238);
 }
 
-div {
-  border: solid 1px rgb(104, 104, 104);
+.border {
+  border-radius: 30px;
+  background-color: black;
+}
+
+.lessons {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.lesson {
+  border-bottom: solid 1px;
+}
+
+.frame1,
+.frame2 {
+  background-color: black;
+  height: 50px;
+  border: solid 1px;
+}
+
+.frame1 {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.frame2 {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }

@@ -27,35 +27,26 @@ const Friday = {
 
 function getDay() {
   const currentDate = new Date();
-  switch(currentDate.getDay()) {
-    case 1:
-      return 0;
-    case 2:
-      return 1;
-    case 3:
-      return 2;
-    case 4:
-      return 3;
-    case 5:
-      return 4;
-    default:
-      return "weekend";
-  }
+  return currentDate.getDay() - 1;
 }
 
 function timeTable(day) {
-  const timetable = document.querySelector(".timetable");
+  const lessons = document.querySelector(".lessons");
   for(let i = 0; i < days[day].lessons.length; i++) {
     const lesson = document.createElement('div');
+    lesson.setAttribute("class", "lesson")
     lesson.innerHTML = days[day].lessons[i];
-    timetable.appendChild(lesson);
+    if(i == days[day].lessons.length - 1) {
+      lesson.setAttribute("style", "border: none;")
+    }
+    lessons.appendChild(lesson);
   }
 }
 
 const days = [Monday, Teusday, Wednesday, Thursday, Friday];
 const day = getDay();
 
-if(day == "weekend") {
+if(day == -1 || day == 5) {
   alert("Сегодня выходной");
 } else {
   timeTable(day);
