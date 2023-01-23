@@ -72,7 +72,7 @@ function timeTable(day) {
     const lesson = document.createElement('div');
     lesson.setAttribute("class", "lesson")
     lesson.innerHTML = days[day].lessons[i].lesson;
-    if(getHours() == days[day].lessons[i].timeEnd) {
+    if(getHours() >= days[day].lessons[i].timeEnd) {
       lesson.setAttribute("style", "background-color: rgb(73, 207, 73);")
     }
     if(i == days[day].lessons.length - 1) {
