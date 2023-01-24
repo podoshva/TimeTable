@@ -198,7 +198,6 @@ function timeTable(day) {
     const lesson = document.createElement('div');
     lesson.setAttribute("class", "lesson");
     lesson.innerHTML = days[day].lessons[i].lesson;
-<<<<<<< HEAD
     let lessonTimeEnd = 0;
     console.log(i);
     switch(i) {
@@ -228,6 +227,7 @@ function timeTable(day) {
         break;
       default:
         break;
+    }
     if(getHours() >= days[day].lessons[i].timeEnd) {
       lesson.setAttribute("style", "background-color: rgb(73, 207, 73);")
     }
