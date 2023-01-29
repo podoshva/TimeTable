@@ -55,41 +55,80 @@ function timeTable(day) { // Основная функция
      
     let lessonTimeEnd = 0; // Конец урока int
     let lessonTime = ""; // Начало и конец урока str
-    switch(i) { // Выставляем значения lessonTimeEnd и lessonTime в зависимости от урока
-      case 0:
-        lessonTimeEnd = 775;
-        lessonTime = "12:15–12:55";
-        break;
-      case 1:
-        lessonTimeEnd = 820;
-        lessonTime = "13:00–13:40";
-        break;
-      case 2:
-        lessonTimeEnd = 880;
-        lessonTime = "14:00–14:40";
-        break;
-      case 3:
-        lessonTimeEnd = 935;
-        lessonTime = "14:55–15:35";
-        break;
-      case 4:
-        lessonTimeEnd = 990;
-        lessonTime = "15:50–16:30";
-        break;
-      case 5:
-        lessonTimeEnd = 1040;
-        lessonTime = "16:40–17:20";
-        break;
-      case 6:
-        lessonTimeEnd = 1090;
-        lessonTime = "17:30–18:10";
-        break;
-      case 7:
-        lessonTimeEnd = 1140;
-        lessonTime = "18:20–19:00";
-        break;
-      default:
-        break;
+    if(days[day] == Monday) { // В понедельник другое расписание
+      switch(i) { // Выставляем значения lessonTimeEnd и lessonTime в зависимости от урока
+        case 0:
+          lessonTimeEnd = 775;
+          lessonTime = "12:15–12:55";
+          break;
+        case 1:
+          lessonTimeEnd = 820;
+          lessonTime = "13:00–13:40";
+          break;
+        case 2:
+          lessonTimeEnd = 905;
+          lessonTime = "14:30–15:05";
+          break;
+        case 3:
+          lessonTimeEnd = 955;
+          lessonTime = "15:20–15:55";
+          break;
+        case 4:
+          lessonTimeEnd = 1000;
+          lessonTime = "16:05–16:40";
+          break;
+        case 5:
+          lessonTimeEnd = 1045;
+          lessonTime = "16:50–17:25";
+          break;
+        case 6:
+          lessonTimeEnd = 1090;
+          lessonTime = "17:35–18:10";
+          break;
+        case 7:
+          lessonTimeEnd = 1135;
+          lessonTime = "18:20–18:55";
+          break;
+        default:
+          break;
+      }
+    } else {
+      switch(i) { // Выставляем значения lessonTimeEnd и lessonTime в зависимости от урока
+        case 0:
+          lessonTimeEnd = 775;
+          lessonTime = "12:15–12:55";
+          break;
+        case 1:
+          lessonTimeEnd = 820;
+          lessonTime = "13:00–13:40";
+          break;
+        case 2:
+          lessonTimeEnd = 880;
+          lessonTime = "14:00–14:40";
+          break;
+        case 3:
+          lessonTimeEnd = 935;
+          lessonTime = "14:55–15:35";
+          break;
+        case 4:
+          lessonTimeEnd = 990;
+          lessonTime = "15:50–16:30";
+          break;
+        case 5:
+          lessonTimeEnd = 1040;
+          lessonTime = "16:40–17:20";
+          break;
+        case 6:
+          lessonTimeEnd = 1090;
+          lessonTime = "17:30–18:10";
+          break;
+        case 7:
+          lessonTimeEnd = 1135;
+          lessonTime = "18:15–18:55";
+          break;
+        default:
+          break;
+      }
     }
 
     if(getHours() >= lessonTimeEnd) { // Проверяем, закончился ли урок
