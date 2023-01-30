@@ -158,7 +158,6 @@ const days = [Monday, Teusday, Wednesday, Thursday, Friday]; // Массив, х
 if(getDay() == -1 || getDay() == 5) { // Определяем, выходной ли сегодня
   todayWeekend();
 } else { // Если нет, то запускаем приложение
-  alert("Эксклюзивное расписание для 8Д❤️\nОно обновляется автоматически каждый день");
   timeTable(getDay());
 }
 // Конец
