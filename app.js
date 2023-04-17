@@ -58,12 +58,12 @@ function timeTable(day) { // Основная функция
     if(days[day] == Monday) { // В понедельник другое расписание
       switch(i) { // Выставляем значения lessonTimeEnd и lessonTime в зависимости от урока
         case 0:
-          lessonTimeEnd = 775;
-          lessonTime = "12:15–12:55";
+          lessonTimeEnd = 780;
+          lessonTime = "12:25–13:00";
           break;
         case 1:
           lessonTimeEnd = 820;
-          lessonTime = "13:00–13:40";
+          lessonTime = "13:05–13:40";
           break;
         case 2:
           lessonTimeEnd = 905;
@@ -74,16 +74,16 @@ function timeTable(day) { // Основная функция
           lessonTime = "15:20–15:55";
           break;
         case 4:
-          lessonTimeEnd = 1000;
-          lessonTime = "16:05–16:40";
+          lessonTimeEnd = 1005;
+          lessonTime = "16:10–16:45";
           break;
         case 5:
-          lessonTimeEnd = 1045;
-          lessonTime = "16:50–17:25";
+          lessonTimeEnd = 1050;
+          lessonTime = "16:55–17:30";
           break;
         case 6:
-          lessonTimeEnd = 1090;
-          lessonTime = "17:35–18:10";
+          lessonTimeEnd = 1095;
+          lessonTime = "17:40–18:15";
           break;
         case 7:
           lessonTimeEnd = 1135;
