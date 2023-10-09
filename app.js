@@ -2,27 +2,27 @@
 // Объекты с данными о каждом дне
 const Monday = {
   day: "Понедельник",
-  lessons: ["−", "Русс.яз", "Химия", "Истор.", "Алгеб.", "Литер.", "Физика", "−"],
+  lessons: ["Алгеб.", "Русс.яз", "Биол.", "Геогр.", "Русс.яз", "Истор.", "Техн.", "-"],
 }
 
 const Teusday = {
   day: "Вторник",
-  lessons: ["−", "Биол.", "Литер.", "Физ-ра", "Геогр.", "Геом.", "Англ.яз", "Пр.мат"],
+  lessons: ["Англ.яз", "Химия", "Биол.", "Литер.", "Геом.", "Физ-ра", "-", "-"],
 }
 
 const Wednesday = {
   day: "Среда",
-  lessons: ["Геогр.", "Англ.яз", "Алгеб.", "Информ.", "Техн.", "Русс.яз", "Физ-ра", "−"],
+  lessons: ["Истор.", "Физ-ра", "Общ-во", "Англ.яз", "Вероят.", "Физика", "−", "-"],
 }
 
 const Thursday = {
   day: "Четверг",
-  lessons: ["−", "Физ-ра", "Геом.", "Русс.яз", "Общ-во", "Физика", "Химия", "−"],
+  lessons: ["Химия", "Физ-ра", "Литер.", "Литер.", "Геогр.", "Геом.", "Англ.яз", "-"],
 }
 
 const Friday = {
   day: "Пятница",
-  lessons: ["Иск-во", "ОБЖ", "Истор.", "Биол.", "Алгеб.", "Род.лит", "Англ.яз", "−"],
+  lessons: ["-", "Информ.", "Русс.яз", "Алгеб.", "Истор.", "Алгеб.", "ОБЖ", "Физика"],
 }
 
 function getDay() { // Функция по возвращению дня
@@ -51,39 +51,39 @@ function timeTable(day) { // Основная функция
     lessonNum.setAttribute("class", "lesson-num");
 
     lessonEl.innerHTML = days[day].lessons[i]; // Встраиваем значения в ранее созданные элементы
-    lessonNum.innerHTML = i;
+    lessonNum.innerHTML = i + 1;
      
     let lessonTimeEnd = 0; // Конец урока int
     let lessonTime = ""; // Начало и конец урока str
-    if(days[day] == Monday) { // В понедельник другое расписание
+    if(days[day] == Monday || days[day] == Thursday) { // В понедельник другое расписание
       switch(i) { // Выставляем значения lessonTimeEnd и lessonTime в зависимости от урока
         case 0:
+          lessonTimeEnd = 545;
+          lessonTime = "08:30–09:05";
+          break;
+        case 1:
+          lessonTimeEnd = 590;
+          lessonTime = "09:15–09:50";
+          break;
+        case 2:
+          lessonTimeEnd = 640;
+          lessonTime = "10:05–10:40";
+          break;
+        case 3:
+          lessonTimeEnd = 690;
+          lessonTime = "10:55–11:30";
+          break;
+        case 4:
+          lessonTimeEnd = 735;
+          lessonTime = "11:40–12:15";
+          break;
+        case 5:
           lessonTimeEnd = 780;
           lessonTime = "12:25–13:00";
           break;
-        case 1:
+        case 6:
           lessonTimeEnd = 820;
           lessonTime = "13:05–13:40";
-          break;
-        case 2:
-          lessonTimeEnd = 905;
-          lessonTime = "14:30–15:05";
-          break;
-        case 3:
-          lessonTimeEnd = 955;
-          lessonTime = "15:20–15:55";
-          break;
-        case 4:
-          lessonTimeEnd = 1005;
-          lessonTime = "16:10–16:45";
-          break;
-        case 5:
-          lessonTimeEnd = 1050;
-          lessonTime = "16:55–17:30";
-          break;
-        case 6:
-          lessonTimeEnd = 1095;
-          lessonTime = "17:40–18:15";
           break;
         case 7:
           lessonTimeEnd = 1135;
@@ -95,36 +95,36 @@ function timeTable(day) { // Основная функция
     } else {
       switch(i) { // Выставляем значения lessonTimeEnd и lessonTime в зависимости от урока
         case 0:
+          lessonTimeEnd = 520;
+          lessonTime = "08:00–08:40";
+          break;
+        case 1:
+          lessonTimeEnd = 565;
+          lessonTime = "08:45–9:25";
+          break;
+        case 2:
+          lessonTimeEnd = 615;
+          lessonTime = "09:35–10:15";
+          break;
+        case 3:
+          lessonTimeEnd = 670;
+          lessonTime = "10:30–11:10";
+          break;
+        case 4:
+          lessonTimeEnd = 725;
+          lessonTime = "11:25–12:05";
+          break;
+        case 5:
           lessonTimeEnd = 775;
           lessonTime = "12:15–12:55";
           break;
-        case 1:
+        case 6:
           lessonTimeEnd = 820;
           lessonTime = "13:00–13:40";
           break;
-        case 2:
+        case 7:
           lessonTimeEnd = 880;
           lessonTime = "14:00–14:40";
-          break;
-        case 3:
-          lessonTimeEnd = 935;
-          lessonTime = "14:55–15:35";
-          break;
-        case 4:
-          lessonTimeEnd = 990;
-          lessonTime = "15:50–16:30";
-          break;
-        case 5:
-          lessonTimeEnd = 1040;
-          lessonTime = "16:40–17:20";
-          break;
-        case 6:
-          lessonTimeEnd = 1090;
-          lessonTime = "17:30–18:10";
-          break;
-        case 7:
-          lessonTimeEnd = 1135;
-          lessonTime = "18:15–18:55";
           break;
         default:
           break;
